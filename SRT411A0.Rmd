@@ -1,0 +1,131 @@
+---
+title: "SRT411 Assignment 0"
+author: "Yasser Kassim"
+#output: github_document
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+#setwd("C:/Users/yasse/Desktop/Seneca/Semester 4/SRT411/Assignments")
+```
+
+## GitHub Documents
+
+This is an R Markdown format used for publishing markdown documents to GitHub. When you click the **Knit** button all R code chunks are run and a markdown file (.md) suitable for publishing to GitHub is generated.
+
+
+```{r}
+##3.1
+(2014-2016)/(2014-1993)*100
+```
+
+```{r}
+##3.2
+startyear = 2016
+DOB = 1993
+a = 2014-startyear
+b = 2014-DOB
+a/b*100
+```
+
+```{r}
+##3.4
+b=c(4,5,8,11)
+sum(x=b)
+```
+
+```{r}
+##3.5
+x=rnorm(100)
+plot(x)
+```
+
+```{r}
+##4
+help(sqrt)
+```
+
+```{r}
+##5
+source("firstscript.R")
+```
+
+```{r}
+##6.2
+P = c(seq(from = 31, to = 60, by = 1))
+Q = matrix(data = P, ncol = 5, nrow = 6)
+Q
+```
+
+```{r}
+##6.3
+source("secondscript.R")
+```
+
+```{r}
+##7
+source("secondscript.R")
+plot(t$a, type="l", ylim=range(t), lwd=3, col=rgb(1,0,0,0.3))
+lines(t$b, type="s", lwd=2, col=rgb(0.3,0.4,0.3,0.9))
+points(t$c, pch=20, cex=4, col=rgb(0,0,1,0.3))
+
+```
+
+```{r}
+##8
+d2 = read.table(file="tst1.txt",header=TRUE)
+d2$g*5
+```
+
+```{r}
+##9
+sqrt(mean(rnorm(100)))
+```
+
+```{r}
+##10.2
+dates = c(strptime(c("20141121","20190214","20190717"),format="%Y%m%d"))
+presents = c(7,1,17)
+plot(dates,presents)
+```
+
+```{r}
+##11.2
+vec1 = 1:100
+for(i in 1:100)
+{
+  if (vec1[i] < 5 | vec1[i] > 90)
+  {
+    vec1[i] = vec1[i] * 10
+  } else
+  {
+    vec1[i] = vec1[i] * 0.1
+  }
+}
+vec1
+```
+
+```{r}
+##11.3
+vec=1:100
+func = function(arg1)
+{
+  for(i in 1:length(arg1))
+  {
+    if (arg1[i] < 5 | arg1[i] > 90)
+    {
+      arg1[i] = arg1[i] * 10
+    } else
+    {
+      arg1[i] = arg1[i] * 0.1
+    }
+  }
+  return (arg1)
+}
+func(arg1=vec)
+```
+
+
+
+
